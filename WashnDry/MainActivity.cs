@@ -1,16 +1,18 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Views;
 
 namespace WashnDry
 {
-	[Activity(Label = "WashnDry", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(Label = "WashnDry", Icon = "@mipmap/icon", Theme = "@android:style/Theme.DeviceDefault.Light")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
+		//int count = 1;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
+			//RequestWindowFeature(WindowFeatures.NoTitle);
 			base.OnCreate(savedInstanceState);
 
 			// Set our view from the "main" layout resource

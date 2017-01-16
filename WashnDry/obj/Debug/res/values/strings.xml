@@ -1,1 +1,1 @@
-<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">Wash n Dry</string></resources>
+<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">WashnDry</string><string name="account">Account</string><string name="schedule">Schedule</string><string name="drying_status">Drying Status</string><string name="setup">Setup</string></resources>
