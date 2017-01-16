@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{76CC5EF1-BFF7-4F81-915F-2836B3F0CC37}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WashnDry/MainActivity.cs">
+    <Files>
+      <File FileName="WashnDry/MainActivity.cs" Line="7" Column="1" />
+      <File FileName="WashnDry/Resources/values/Strings.xml" Line="4" Column="32" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WashnDry AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light" />
+</Properties>
