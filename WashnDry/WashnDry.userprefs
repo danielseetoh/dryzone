@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{76CC5EF1-BFF7-4F81-915F-2836B3F0CC37}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="MainActivity.cs" Line="148" Column="3" />
+      <File FileName="HomeFragment.cs" Line="33" Column="1" />
+      <File FileName="WashnDry.csproj" Line="1" Column="1" />
+      <File FileName="ScheduleFragment.cs" Line="33" Column="60" />
+      <File FileName="AccountFragment.cs" Line="30" Column="4" />
+      <File FileName="StatusFragment.cs" Line="33" Column="58" />
+      <File FileName="SplashActivity.cs" Line="41" Column="1" />
+      <File FileName="SetupActivity.cs" Line="40" Column="30" />
+      <File FileName="MyActionBarDrawerToggle.cs" Line="20" Column="60" />
+      <File FileName="AppPreferences.cs" Line="30" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WashnDry AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.42f789094ba99ff3" AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar" />
+</Properties>
