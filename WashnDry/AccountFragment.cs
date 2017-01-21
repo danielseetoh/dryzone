@@ -13,14 +13,17 @@ using Android.Views;
 using Android.Widget;
 
 namespace WashnDry
-{
+{	
+
 	public class AccountFragment : Fragment
 	{
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
+
 			// Create your fragment here
+
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -30,11 +33,27 @@ namespace WashnDry
 
 			//return base.OnCreateView(inflater, container, savedInstanceState);
 
+
 			var rootView = inflater.Inflate(Resource.Layout.Account, container, false);
 			//var imageId = Resources.GetIdentifier(
 			//	"com.companyname.washndry:drawable/earth",
 			//	null, null);
-			//rootView.FindViewById<ImageView>(Resource.Id.indicators).SetImageResource(imageId);
+
+
+			Spinner laundryFrequencySpinner = rootView.FindViewById<Spinner>(Resource.Id.laundryFrequency_Spinner);
+			string firstItem = laundryFrequencySpinner.SelectedItem.ToString();
+			laundryFrequencySpinner.ItemSelected += (s,e) => {
+				string selected = laundryFrequencySpinner.SelectedItem.ToString();
+				if (firstItem.Equals(selected)){
+					//Toast.MakeText(Context, "Please make a selection", ToastLength.Short).Show();
+				}
+				else {
+					Toast.MakeText(Context, "Selected: "+selected, ToastLength.Short).Show();
+				}
+
+			};
+
+
 			return rootView;
 		}
 	}

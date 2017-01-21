@@ -23,7 +23,7 @@ namespace WashnDry
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
+			System.Diagnostics.Debug.WriteLine("From Debug");
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
