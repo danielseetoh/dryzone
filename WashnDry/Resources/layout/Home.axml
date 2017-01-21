@@ -3,26 +3,30 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <EditText
+    <TextView
+        android:text="Temperature"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
-        android:text="Temperature" />
-    <EditText
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="Wind"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:text="Wind" />
-    <EditText
+        android:id="@+id/textView2" />
+    <TextView
+        android:text="Humidity"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:text="Humidity" />
-    <EditText
+        android:id="@+id/textView3" />
+    <TextView
+        android:text="Estimated Time For Drying:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
-        android:text="Estimated Time For Drying:" />
+        android:id="@+id/textView4" />
     <Button
         android:text="Start Drying"
         android:layout_width="match_parent"
