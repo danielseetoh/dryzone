@@ -17,6 +17,9 @@ namespace WashnDry
 
 	public class AccountFragment : Fragment
 	{
+		private List<string> mItems;
+		private ListView mListView;
+
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -24,7 +27,10 @@ namespace WashnDry
 
 			// Create your fragment here
 
+
+
 		}
+
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
@@ -40,6 +46,8 @@ namespace WashnDry
 			//	null, null);
 
 
+
+
 			Spinner laundryFrequencySpinner = rootView.FindViewById<Spinner>(Resource.Id.laundryFrequency_Spinner);
 			string firstItem = laundryFrequencySpinner.SelectedItem.ToString();
 			laundryFrequencySpinner.ItemSelected += (s,e) => {
@@ -53,6 +61,17 @@ namespace WashnDry
 
 			};
 
+			mItems = new List<string>();
+			mListView = rootView.FindViewById<ListView>(Resource.Id.laundryTime_ListView);
+
+			mItems.Add("tale");
+			mItems.Add("as");
+			mItems.Add("old");
+			mItems.Add("as");
+			mItems.Add("time");
+
+			ArrayAdapter<string> adaptor = new ArrayAdapter<string>(Context, Android.Resource.Layout.SimpleListItem1, mItems);
+			mListView.Adapter = adaptor;
 
 			return rootView;
 		}

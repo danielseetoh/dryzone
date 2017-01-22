@@ -33,17 +33,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/laundryFrequency_Spinner" />
     <TextView
-        android:text="Account Page here"
+        android:text="When do you do your laundry?"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
-<!--    <ListView
+    <ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listView1"
+        android:layout_height="200px"
+        android:id="@+id/laundryTime_ListView"
         android:textAlignment="gravity"
-        android:layout_gravity="start" />-->
+        android:layout_gravity="start" />
 </LinearLayout>

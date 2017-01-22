@@ -1839,11 +1839,11 @@ containing a value of this type.
         public static final int image=0x7f0b0029;
         public static final int info=0x7f0b006c;
         public static final int laundryFrequency_Spinner=0x7f0b0058;
+        public static final int laundryTime_ListView=0x7f0b0059;
         public static final int left_drawer=0x7f0b0060;
         public static final int line1=0x7f0b0066;
         public static final int line3=0x7f0b006a;
         public static final int listMode=0x7f0b0009;
-        public static final int listView1=0x7f0b0059;
         public static final int list_item=0x7f0b002b;
         public static final int media_actions=0x7f0b0064;
         public static final int middle=0x7f0b001c;

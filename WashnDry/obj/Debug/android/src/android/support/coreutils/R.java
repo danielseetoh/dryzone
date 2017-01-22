@@ -22,6 +22,8 @@ public final class R {
     }
     public static final class array {
         public static int PagesArray=0x7f0d0000;
+        public static int laundryFrequencyArray=0x7f0d0001;
+        public static int laundryTimeArray=0x7f0d0002;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1783,11 +1785,11 @@ containing a value of this type.
         public static int splash_screen=0x7f020058;
     }
     public static final class id {
-        public static int CreateAccountButton=0x7f0b006f;
-        public static int Email=0x7f0b006e;
-        public static int Password=0x7f0b006d;
-        public static int Username=0x7f0b006c;
-        public static int action0=0x7f0b005f;
+        public static int CreateAccountButton=0x7f0b0071;
+        public static int Email=0x7f0b0070;
+        public static int Password=0x7f0b006f;
+        public static int Username=0x7f0b006e;
+        public static int action0=0x7f0b0061;
         public static int action_bar=0x7f0b0045;
         public static int action_bar_activity_content=0x7f0b0000;
         public static int action_bar_container=0x7f0b0044;
@@ -1796,7 +1798,7 @@ containing a value of this type.
         public static int action_bar_subtitle=0x7f0b0025;
         public static int action_bar_title=0x7f0b0024;
         public static int action_context_bar=0x7f0b0046;
-        public static int action_divider=0x7f0b0063;
+        public static int action_divider=0x7f0b0065;
         public static int action_menu_divider=0x7f0b0002;
         public static int action_menu_presenter=0x7f0b0003;
         public static int action_mode_bar=0x7f0b0042;
@@ -1809,25 +1811,25 @@ containing a value of this type.
         public static int always=0x7f0b001d;
         public static int beginning=0x7f0b001a;
         public static int bottom=0x7f0b0022;
-        public static int button1=0x7f0b005b;
+        public static int button1=0x7f0b005d;
         public static int buttonPanel=0x7f0b002e;
-        public static int cancel_action=0x7f0b0060;
+        public static int cancel_action=0x7f0b0062;
         public static int changeEmail=0x7f0b0056;
         public static int changePassword=0x7f0b0055;
         public static int checkbox=0x7f0b003c;
-        public static int chronometer=0x7f0b0066;
+        public static int chronometer=0x7f0b0068;
         public static int collapseActionView=0x7f0b001e;
         public static int contentPanel=0x7f0b0034;
-        public static int content_frame=0x7f0b005d;
+        public static int content_frame=0x7f0b005f;
         public static int custom=0x7f0b003a;
         public static int customPanel=0x7f0b0039;
         public static int decor_content_parent=0x7f0b0043;
         public static int default_activity_button=0x7f0b002a;
         public static int disableHome=0x7f0b000c;
-        public static int drawer_layout=0x7f0b005c;
+        public static int drawer_layout=0x7f0b005e;
         public static int edit_query=0x7f0b0047;
         public static int end=0x7f0b001b;
-        public static int end_padder=0x7f0b006b;
+        public static int end_padder=0x7f0b006d;
         public static int expand_activities_button=0x7f0b0028;
         public static int expanded_menu=0x7f0b003b;
         public static int home=0x7f0b0004;
@@ -1835,13 +1837,15 @@ containing a value of this type.
         public static int icon=0x7f0b002c;
         public static int ifRoom=0x7f0b001f;
         public static int image=0x7f0b0029;
-        public static int info=0x7f0b006a;
-        public static int left_drawer=0x7f0b005e;
-        public static int line1=0x7f0b0064;
-        public static int line3=0x7f0b0068;
+        public static int info=0x7f0b006c;
+        public static int laundryFrequency_Spinner=0x7f0b0058;
+        public static int laundryTime_ListView=0x7f0b0059;
+        public static int left_drawer=0x7f0b0060;
+        public static int line1=0x7f0b0066;
+        public static int line3=0x7f0b006a;
         public static int listMode=0x7f0b0009;
         public static int list_item=0x7f0b002b;
-        public static int media_actions=0x7f0b0062;
+        public static int media_actions=0x7f0b0064;
         public static int middle=0x7f0b001c;
         public static int multiply=0x7f0b0014;
         public static int never=0x7f0b0020;
@@ -1875,18 +1879,18 @@ containing a value of this type.
         public static int src_atop=0x7f0b0016;
         public static int src_in=0x7f0b0017;
         public static int src_over=0x7f0b0018;
-        public static int status_bar_latest_event_content=0x7f0b0061;
+        public static int status_bar_latest_event_content=0x7f0b0063;
         public static int submenuarrow=0x7f0b003f;
         public static int submit_area=0x7f0b0050;
         public static int tabMode=0x7f0b000b;
-        public static int text=0x7f0b0069;
-        public static int text2=0x7f0b0067;
+        public static int text=0x7f0b006b;
+        public static int text2=0x7f0b0069;
         public static int textSpacerNoButtons=0x7f0b0037;
         public static int textView1=0x7f0b0054;
-        public static int textView2=0x7f0b0058;
-        public static int textView3=0x7f0b0059;
-        public static int textView4=0x7f0b005a;
-        public static int time=0x7f0b0065;
+        public static int textView2=0x7f0b005a;
+        public static int textView3=0x7f0b005b;
+        public static int textView4=0x7f0b005c;
+        public static int time=0x7f0b0067;
         public static int title=0x7f0b002d;
         public static int title_template=0x7f0b0032;
         public static int top=0x7f0b0023;
