@@ -75,11 +75,15 @@ namespace WashnDry
 
 
 			mListView.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
+
+			// setting the checkboxes when the program is loaded. Should pull values from a database that populates the user's preferences
 			mListView.SetItemChecked(1, true);
 			mListView.SetItemChecked(2, false);
 			mListView.SetItemChecked(3, false);
 			mListView.SetItemChecked(4, true);
 
+			// Reads the value of the checkboxes (Whether they are selected or not) and then does someting with the data
+			// Should use this methid with an onSubmitEvent when the user decides to save his work. 
 			var sparseArray = rootView.FindViewById<ListView>(Resource.Id.laundryTime_ListView).CheckedItemPositions;
 			for (var i = 0; i < sparseArray.Size(); i++)
 			{
@@ -88,7 +92,26 @@ namespace WashnDry
 			}
 			Console.WriteLine();
 
+			mListView.ItemClick += click_event;
+			mListView.ItemSelected += onSelection;
+
 			return rootView;
 		}
-	}
+
+		void onSelection(object sender, AdapterView.ItemSelectedEventArgs e)
+		{
+			// I cannot get this to work for some reason
+			Console.WriteLine("Hello");
+			Toast.MakeText(Context, "selected: " + mItems[e.Position], ToastLength.Short).Show();
+		}
+
+		void click_event(object sender, AdapterView.ItemClickEventArgs e)
+		{
+			//Toast.MakeText(Context,"clicked: " + mItems[e.Position], ToastLength.Short).Show();
+			// a method that fires when a list item is clicked
+			var selectedIndex = e.Position.ToString();
+			Toast.MakeText(Context, "clicked: " + selectedIndex, ToastLength.Short).Show();
+			//throw new NotImplementedException();
+		}
+}
 }
