@@ -35,7 +35,6 @@
             android:minHeight="25px"
             android:weightSum="100">
             <TextView
-                android:text="Jane"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,12 +58,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/changeEmail"
-        android:hint="Change Email" />
+        android:hint="Change Email"
+        android:text="hi" />
     <CheckBox
         android:text="Allow Location Services"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/allowLocationServices" />
+    <TextView
+        android:text="Laundry Frequency"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
     <Spinner
         android:entries="@array/laundryFrequencyArray"
         android:backgroundTint="#64badd"
@@ -86,4 +92,9 @@
         android:textAlignment="gravity"
         android:layout_gravity="start"
         android:background="#ff96fffa" />
+    <Button
+        android:text="Save Changes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveChanges" />
 </LinearLayout>
