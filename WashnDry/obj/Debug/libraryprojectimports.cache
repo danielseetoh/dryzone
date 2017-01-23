@@ -1,8 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <Jars></Jars>
-  <ResolvedResourceDirectories />
-  <ResolvedAssetDirectories />
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>/Users/danielseetoh/PersonalProjects/WashnDry/washndry/WashnDry/obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/danielseetoh/PersonalProjects/WashnDry/washndry/WashnDry/obj/Debug/__library_projects__/Plugin.Permissions/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/danielseetoh/PersonalProjects/WashnDry/washndry/WashnDry/obj/Debug/__library_projects__/Plugin.Geolocator/library_project_imports/res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Permissions/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Geolocator/library_project_imports/assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
-  <ResolvedResourceDirectoryStamps />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>/Users/danielseetoh/PersonalProjects/WashnDry/washndry/WashnDry/obj/Debug/__library_projects__/Plugin.CurrentActivity.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/danielseetoh/PersonalProjects/WashnDry/washndry/WashnDry/obj/Debug/__library_projects__/Plugin.Permissions.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/danielseetoh/PersonalProjects/WashnDry/washndry/WashnDry/obj/Debug/__library_projects__/Plugin.Geolocator.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
 </Paths>
