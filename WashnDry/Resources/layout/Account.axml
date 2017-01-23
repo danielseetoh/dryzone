@@ -4,13 +4,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:weightSum="100"
+    android:paddingLeft="35px"
+    android:paddingRight="35px">
     <TextView
         android:text="Account Page here"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:weightSum="100">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_weight="50"
+            android:id="@+id/imageView1" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:weightSum="100">
+            <TextView
+                android:text="Jane"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:layout_weight="50" />
+            <TextView
+                android:text="Tokyo, Japan"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/country"
+                android:layout_weight="50" />
+        </LinearLayout>
+    </LinearLayout>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,5 +84,6 @@
         android:layout_height="200px"
         android:id="@+id/laundryTime_ListView"
         android:textAlignment="gravity"
-        android:layout_gravity="start" />
+        android:layout_gravity="start"
+        android:background="#ff96fffa" />
 </LinearLayout>

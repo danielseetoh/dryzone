@@ -65,13 +65,28 @@ namespace WashnDry
 			mListView = rootView.FindViewById<ListView>(Resource.Id.laundryTime_ListView);
 
 			mItems.Add("tale");
-			mItems.Add("as");
+			mItems.Add("as very");
 			mItems.Add("old");
 			mItems.Add("as");
 			mItems.Add("time");
 
-			ArrayAdapter<string> adaptor = new ArrayAdapter<string>(Context, Android.Resource.Layout.SimpleListItem1, mItems);
+			ArrayAdapter<string> adaptor = new ArrayAdapter<string>(Context, Android.Resource.Layout.SimpleListItemMultipleChoice, mItems);
 			mListView.Adapter = adaptor;
+
+
+			mListView.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
+			mListView.SetItemChecked(1, true);
+			mListView.SetItemChecked(2, false);
+			mListView.SetItemChecked(3, false);
+			mListView.SetItemChecked(4, true);
+
+			var sparseArray = rootView.FindViewById<ListView>(Resource.Id.laundryTime_ListView).CheckedItemPositions;
+			for (var i = 0; i < sparseArray.Size(); i++)
+			{
+				Console.Write(sparseArray.KeyAt(i) + "=" + sparseArray.ValueAt(i) + ",");
+				Toast.MakeText(Context, "Selected: " + sparseArray.KeyAt(i) + "=" + sparseArray.ValueAt(i), ToastLength.Short).Show();
+			}
+			Console.WriteLine();
 
 			return rootView;
 		}
