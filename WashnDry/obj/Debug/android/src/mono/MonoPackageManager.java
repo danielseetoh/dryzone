@@ -109,6 +109,11 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Permissions.Abstractions.dll",
+		"Plugin.Permissions.dll",
+		"Plugin.Geolocator.Abstractions.dll",
+		"Plugin.Geolocator.dll",
 		"System.Threading.dll",
 		"System.Collections.dll",
 		"System.Collections.Concurrent.dll",
@@ -118,6 +123,8 @@ class MonoPackageManager_Resources {
 		"System.Runtime.InteropServices.dll",
 		"System.Runtime.Extensions.dll",
 		"System.Reflection.Extensions.dll",
+		"System.Resources.ResourceManager.dll",
+		"System.Threading.Tasks.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

@@ -1,12 +1,17 @@
 ﻿<Properties StartupConfiguration="{76CC5EF1-BFF7-4F81-915F-2836B3F0CC37}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WashnDry/WashnDry.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WashnDry/HomeFragment.cs">
     <Files>
       <File FileName="WashnDry/MainActivity.cs" Line="26" Column="1" />
       <File FileName="WashnDry/Resources/values/Strings.xml" Line="8" Column="37" />
       <File FileName="WashnDry/Properties/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="WashnDry/AccountActivity.cs" Line="26" Column="2" />
       <File FileName="WashnDry/packages.config" Line="1" Column="1" />
-      <File FileName="WashnDry/WashnDry.csproj" Line="21" Column="38" />
+      <File FileName="WashnDry/WashnDry.csproj" Line="1" Column="1" />
+      <File FileName="WashnDry/HomeFragment.cs" Line="181" Column="64" />
+      <File FileName="packages/Xam.Plugin.Geolocator.3.0.4/readme.txt" Line="1" Column="1" />
+      <File FileName="WashnDry/AccountFragment.cs" Line="1" Column="1" />
+      <File FileName="WashnDry/SplashActivity.cs" Line="35" Column="4" />
+      <File FileName="WashnDry/Location.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
