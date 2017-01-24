@@ -36,21 +36,17 @@ namespace WashnDry
 			return laundrySlots;
 		}
 
+		public List<int> getLaundryTime_Keys()
+		{
+			laundrySlots = new Dictionary<int, string>();
+			return laundrySlots.Keys.ToList();
+		}
 
-		//public List<string> getLaundryTimeSlots()
-		//{
-			
+		public List<string> getLaundryTime_Values()
+		{
+			laundrySlots = new Dictionary<int, string>();
+			return laundrySlots.Values.ToList();
+		}
 
-		//	mItems = new List<string>();
-		//	mItems.Add("5am - 8am");
-		//	mItems.Add("8am - 12nn");
-		//	mItems.Add("12nn - 4pm");
-		//	mItems.Add("4pm - 8pm");
-		//	mItems.Add("8pm - 1am");
-		//	mItems.Add("1am - 5am");
-
-		//	mItems[4] = "hello";
-		//	return mItems;
-		//}
 	}
 }

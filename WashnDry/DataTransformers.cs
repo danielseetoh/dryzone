@@ -25,5 +25,18 @@ namespace WashnDry
 
 			return mString.TrimEnd(',');
 		}
+
+		public static List<bool> stringToBooleanList(string mString)
+		{
+			List<bool> boolList = new List<bool>();
+			List<string> strList = mString.Split(',').ToList();;
+			foreach (string s in strList)
+			{
+				if (s == "True") { boolList.Add(true); }
+				else { boolList.Add(false);}
+
+			}
+			return boolList;
+		}
 	}
 }
