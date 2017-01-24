@@ -13,13 +13,28 @@ using Android.Views;
 using Android.Widget;
 
 namespace WashnDry
-{	
-
+{
+	
 	public class AccountFragment : Fragment
 	{
+		private TextView name;
+		private TextView country;
+		private EditText changeEmail;
+		private EditText changePassword;
+		private CheckBox allowLocationServices;
+		private Spinner laundryFrequencySpinner;
 		private ListView mListView;
+		private Button editSettings;
+		private Button resetSettings;
+		private Button saveChangesButton;
+
 		private Dictionary<int, string> laundryTime;
-		private SparseBooleanArray sparseArray;
+		private SparseBooleanArray updatedLaundryTimes;
+		private AppPreferences userInfo;
+
+		private List<int> laundryTime_Keys;
+		private List<string> laundryTime_Values;
+		private List<bool> laundryTime_Checked;
 
 		public override void OnCreate(Bundle savedInstanceState)
 		{
@@ -29,53 +44,46 @@ namespace WashnDry
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			// Use this to return your custom view for this Fragment
-
 			var rootView = inflater.Inflate(Resource.Layout.Account, container, false);
 			//var imageId = Resources.GetIdentifier(
 			//	"com.companyname.washndry:drawable/earth",
 			//	null, null);
 
 			// Constructors of other classes to get stored data
-			AppPreferences userInfo = new AppPreferences(Context);
+			userInfo = new AppPreferences(Activity);
 			ListData data = new ListData();
 			laundryTime = data.getLaundryTimeSlots();
 
 			// retrieving data from db
-			List<int> laundryTime_Keys = laundryTime.Keys.ToList();
-			List<string> laundryTime_Values = laundryTime.Values.ToList();
-				// Dummy Data. By right we should get it from AppPreferences.
-				List<bool> laundryTime_Checked = new List<bool>();
-				laundryTime_Checked.Add(true);
-				laundryTime_Checked.Add(false);
-				laundryTime_Checked.Add(true);
-				laundryTime_Checked.Add(false);
-				laundryTime_Checked.Add(true);
+			laundryTime_Keys = laundryTime.Keys.ToList();
+			laundryTime_Values = laundryTime.Values.ToList();
+			laundryTime_Checked = DataTransformers.stringToBooleanList(userInfo.getLaundryTime());
 
 			// retrieving UI elements as objects
-			TextView name = rootView.FindViewById<TextView>(Resource.Id.name);
-			TextView country = rootView.FindViewById<TextView>(Resource.Id.country);
-			Button saveChangesButton = rootView.FindViewById<Button>(Resource.Id.saveChanges);
-			Spinner laundryFrequencySpinner = rootView.FindViewById<Spinner>(Resource.Id.laundryFrequency_Spinner);
+			name = rootView.FindViewById<TextView>(Resource.Id.name);
+			country = rootView.FindViewById<TextView>(Resource.Id.country);
+			changeEmail = rootView.FindViewById<EditText>(Resource.Id.changeEmail);
+			changePassword = rootView.FindViewById<EditText>(Resource.Id.changePassword);
+			allowLocationServices = rootView.FindViewById<CheckBox>(Resource.Id.allowLocationServices);
+			laundryFrequencySpinner = rootView.FindViewById<Spinner>(Resource.Id.laundryFrequency_Spinner);
 			mListView = rootView.FindViewById<ListView>(Resource.Id.laundryTime_ListView);
+			editSettings = rootView.FindViewById<Button>(Resource.Id.editSettings);
+			resetSettings = rootView.FindViewById<Button>(Resource.Id.resetSettings);
+			saveChangesButton = rootView.FindViewById<Button>(Resource.Id.saveChanges);
+
+			enableUIElements(false);
 
 			// Array adaptors for the list view
-			ArrayAdapter<string> adaptor = new ArrayAdapter<string>(Context, Android.Resource.Layout.SimpleListItemMultipleChoice, laundryTime_Values);
+			ArrayAdapter<string> adaptor = new ArrayAdapter<string>(Activity, Android.Resource.Layout.SimpleListItemMultipleChoice, laundryTime_Values);
 			mListView.Adapter = adaptor;
 			mListView.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
-			mListView.ItemClick += click_event;
-			mListView.ItemSelected += onSelection;
 
-			//sparseArray = rootView.FindViewById<ListView>(Resource.Id.laundryTime_ListView).CheckedItemPositions; // Reads the value of the checkboxes (Whether they are selected or not) and then does someting with the data
-
+			updatedLaundryTimes = mListView.CheckedItemPositions; // Reads the value of the checkboxes (Whether they are selected or not) and then does someting with the data
 
 			// Assigning values to the various UI elements
 			name.Text = userInfo.getUsername();
 			country.Text = "Japan, Tokyo";
-			for (int i = 0; i < laundryTime_Checked.Count; i++)
-			{
-				mListView.SetItemChecked(laundryTime_Keys[i], laundryTime_Checked[i]);
-			}
+			initializeFieldsFromDB();
 
 			// Laundry Frequency Spinner Selector
 			string firstItem = laundryFrequencySpinner.SelectedItem.ToString();
@@ -87,47 +95,66 @@ namespace WashnDry
 					//do something
 				}
 				else {
-					Toast.MakeText(Context, "Selected: " + selected, ToastLength.Short).Show();
+					//Toast.MakeText(Activity, "Selected: " + selected, ToastLength.Short).Show();
 				}
 
 			};
 
+			editSettings.Click += editSettingsEvent;
+			resetSettings.Click += resetSettingsEvent;
 			saveChangesButton.Click += saveChangesEvent;
-
-
 
 			return rootView;
 		}
 
-		void onSelection(object sender, AdapterView.ItemSelectedEventArgs e)
-		{
-			// I cannot get this to work for some reason
-			Console.WriteLine("Hello");
-			//Toast.MakeText(Context, "selected: " + mItems[e.Position], ToastLength.Short).Show();
-		}
-
 		void click_event(object sender, AdapterView.ItemClickEventArgs e)
 		{
-			//Toast.MakeText(Context,"clicked: " + mItems[e.Position], ToastLength.Short).Show();
-			// a method that fires when a list item is clicked
-			//for (var i = 0; i < sparseArray.Size(); i++)
-			//{
-			//	Console.Write(sparseArray.KeyAt(i) + "=" + sparseArray.ValueAt(i) + ",");
-			//	Toast.MakeText(Context, "Selected: " + sparseArray.KeyAt(i) + "=" + sparseArray.ValueAt(i), ToastLength.Short).Show();
-			//}
-			var selectedIndex = e.Position.ToString();
-			Toast.MakeText(Context, "clicked: " + selectedIndex, ToastLength.Short).Show();
+			//var selectedIndex = e.Position.ToString();
+			//Toast.MakeText(Activity, "clicked: " + selectedIndex, ToastLength.Short).Show();
+			//throw new NotImplementedException();
+		}
+
+		void editSettingsEvent(object sender, EventArgs e)
+		{
+			enableUIElements(true);
+			Toast.MakeText(Activity, "In Edit Mode", ToastLength.Short).Show();
+			//throw new NotImplementedException();
+		}
+
+		void resetSettingsEvent(object sender, EventArgs e)
+		{
+			initializeFieldsFromDB();
+			Toast.MakeText(Activity, "changes reset", ToastLength.Short).Show();
 			//throw new NotImplementedException();
 		}
 
 		void saveChangesEvent(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			String updatedLaundryTimes_String = DataTransformers.sparseArrayToString(updatedLaundryTimes);
+			userInfo.saveLaundryTime(updatedLaundryTimes_String);
+			enableUIElements(false);
+			Toast.MakeText(Activity, "changes saved", ToastLength.Short).Show();
 		}
 
-		void saveChangesEvent()
+		void initializeFieldsFromDB()
 		{
-			Toast.MakeText(Context, "changes saved", ToastLength.Short).Show();
+			changeEmail.Text = userInfo.getEmail();
+			changePassword.Text = "";
+			for (int i = 0; i < laundryTime_Checked.Count; i++) { mListView.SetItemChecked(laundryTime_Keys[i], laundryTime_Checked[i]); }
 		}
-}
+
+		void enableUIElements(bool isEnabled)
+		{
+			changeEmail.Enabled = isEnabled;
+			changePassword.Enabled = isEnabled;
+			allowLocationServices.Enabled = isEnabled;
+			laundryFrequencySpinner.Enabled = isEnabled;
+			mListView.Enabled = isEnabled;
+			editSettings.Enabled = !isEnabled;
+			resetSettings.Enabled = isEnabled;
+			saveChangesButton.Enabled = isEnabled;
+		}
+
+	}
+
 }
