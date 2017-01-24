@@ -72,10 +72,7 @@ namespace WashnDry
 		// need to edit
 		public string getLaundryTime()
 		{
-			
-
 			return prefs.GetString(PREFERENCE_LAUNDRY_TIME_KEY, "");
-
 
 		}
 

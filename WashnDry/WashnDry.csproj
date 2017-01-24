@@ -84,6 +84,7 @@
     <Compile Include="SetupActivity.cs" />
     <Compile Include="AppPreferences.cs" />
     <Compile Include="ListData.cs" />
+    <Compile Include="DataTransformers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
