@@ -1,20 +1,8 @@
-﻿<Properties StartupConfiguration="{76CC5EF1-BFF7-4F81-915F-2836B3F0CC37}|Default">
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="WashnDry/AccountFragment.cs" Line="149" Column="43" />
-      <File FileName="WashnDry/WashnDry.csproj" Line="1" Column="1" />
-      <File FileName="WashnDry/Resources/values/Colors.xml" Line="3" Column="49" />
-      <File FileName="WashnDry/AppPreferences.cs" Line="76" Column="1" />
-      <File FileName="WashnDry/ListData.cs" Line="30" Column="28" />
-      <File FileName="WashnDry/SplashActivity.cs" Line="44" Column="4" />
-      <File FileName="WashnDry/DataTransformers.cs" Line="26" Column="32" />
-      <File FileName="WashnDry/SetupActivity.cs" Line="18" Column="36" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WashnDry AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.f76cb851" AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light" />
 </Properties>
