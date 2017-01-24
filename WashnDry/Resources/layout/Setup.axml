@@ -19,6 +19,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/Email"
         android:hint="Email" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/laundryTime_ListView" />
     <Button
         android:text="Create Account"
         android:layout_width="match_parent"
